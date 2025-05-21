@@ -1,0 +1,181 @@
+/* SAO Login Styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0c0c0c 100%);
+    font-family: 'Nova Square', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(102, 204, 255, 0.3);
+    overflow: hidden;
+}
+
+.login-header {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.login-logo {
+    height: 44px;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.close-button img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.close-button img:hover {
+    opacity: 1;
+}
+
+.login-tabs {
+    padding: 20px;
+}
+
+.login-tabs input[type="radio"] {
+    display: none;
+}
+
+.login-tabs label {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login-tabs input[type="radio"]:checked + label {
+    color: #66ccff;
+    border-bottom: 2px solid #66ccff;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.register-form {
+    display: none;
+}
+
+#tab-register:checked ~ .tab-content .register-form {
+    display: block;
+}
+
+#tab-login:checked ~ .tab-content .login-form {
+    display: block;
+}
+
+.sao-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.sao-input:focus {
+    border-color: #66ccff;
+    box-shadow: 0 0 5px rgba(102, 204, 255, 0.3);
+    outline: none;
+}
+
+.verification {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.verification .sao-input {
+    flex: 1;
+    margin: 0;
+}
+
+.verify-button {
+    padding: 0 15px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.verify-button:hover {
+    background: #e0e0e0;
+}
+
+.sao-button {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0 10px;
+    border: none;
+    border-radius: 4px;
+    background: #66ccff;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sao-button:hover {
+    background: #33b5ff;
+    box-shadow: 0 0 10px rgba(102, 204, 255, 0.5);
+}
+
+.form-footer {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot-password {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #66ccff;
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 10px;
+    }
+    
+    .login-tabs label {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    
+    .sao-button {
+        font-size: 16px;
+    }
+}
