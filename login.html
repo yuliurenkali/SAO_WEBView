@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SAO Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" charset="utf-8">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <img src="img/logo-full.png" alt="SAO Logo" class="login-logo">
+                <div class="close-button">
+                    <a href="index.html">
+                        <img src="img/cancel_normal.png" alt="Close">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="login-tabs">
+                <input type="radio" id="tab-login" name="tabs" checked>
+                <label for="tab-login">Login</label>
+                <input type="radio" id="tab-register" name="tabs">
+                <label for="tab-register">Register</label>
+                
+                <div class="tab-content">
+                    <div class="login-form">
+                        <input type="text" placeholder="Username/Email" class="sao-input">
+                        <input type="password" placeholder="Password" class="sao-input">
+                        <button class="sao-button">Login</button>
+                        <div class="form-footer">
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                    </div>
+                    
+                    <div class="register-form">
+                        <input type="email" placeholder="Email" class="sao-input">
+                        <input type="password" placeholder="Password" class="sao-input">
+                        <input type="password" placeholder="Confirm Password" class="sao-input">
+                        <div class="verification">
+                            <input type="text" placeholder="Verification Code" class="sao-input">
+                            <button class="verify-button">Get Code</button>
+                        </div>
+                        <button class="sao-button">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
