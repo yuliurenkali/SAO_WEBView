@@ -46,8 +46,6 @@
 
 }
 
-
-
 .header_czimg,
 .header_login_img {
     margin-left: 18px;
@@ -216,8 +214,6 @@
     display: none;
 }
 
-
-
 #account_one:checked~.account label:nth-child(2) {
     display: none;
 }
@@ -225,7 +221,6 @@
 #account_one:checked~.register {
     display: block;
 }
-
 
 #account_two:checked~.account label:nth-child(1) {
     display: none;

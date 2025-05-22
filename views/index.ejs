@@ -42,16 +42,8 @@
   <%- include('partials/common-scripts') %>
 </body>
 <script type="text/javascript">
-
 	var scene = $('#outbox').get(0);
 	var parallaxInstance = new Parallax(scene);
-	var bodyBgs = [];
-	bodyBgs[0] = "/img/bg4.jpg";
-	var randomBgIndex = Math.round(Math.random() * 10);
-	$('#imgbox').css({
-		"background-image": "url(" + bodyBgs[0] + ") "
-	});
-	var userAgent = navigator.userAgent;
 	var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
 	var isEdge = userAgent.indexOf('Edge') > -1 && !isLessIE11;
 	var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf('rv:11.0') > -1;
@@ -63,7 +55,6 @@
 	} else {
 		zscreen();
 		zparticle();
-
 	}
 	$('#btn-nav-menu').on('click', function () {
 		$(this).toggleClass('open');

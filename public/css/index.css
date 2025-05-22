@@ -23,6 +23,7 @@ html, body {
   margin-left: -5%;
   position: absolute;
   transform-origin: center center;
+  background-image: url('/img/bg4.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
