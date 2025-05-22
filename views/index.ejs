@@ -43,6 +43,7 @@
 </body>
 <script type="text/javascript">
 	var scene = $('#outbox').get(0);
+  var userAgent = navigator.userAgent;
 	var parallaxInstance = new Parallax(scene);
 	var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
 	var isEdge = userAgent.indexOf('Edge') > -1 && !isLessIE11;
