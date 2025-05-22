@@ -22,6 +22,10 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script type="module">
+        import { checkAuthStatus } from './js/auth.js';
+        document.addEventListener('DOMContentLoaded', checkAuthStatus);
+    </script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/time.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet" type="text/css">
