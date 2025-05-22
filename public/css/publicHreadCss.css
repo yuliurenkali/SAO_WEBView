@@ -73,6 +73,7 @@
     color: #ccc;
     cursor: pointer;
 }
+
 .header_cz:hover,
 .header_cz:hover .header_czimg,
 .header_login:hover .dr,
@@ -118,6 +119,7 @@
     position: absolute;
     top: -58px;
     left: calc(50% - 100.5px);
+    filter: drop-shadow(0 0 15px rgba(105, 224, 255, 0.5));
 }
 
 .mhy_account_out {
@@ -142,7 +144,7 @@
 }
 
 .account label {
-    display:inline-block;
+    display: inline-block;
     padding: 0px 0px 0px 20px;
     width: 100%;
     text-align: center;

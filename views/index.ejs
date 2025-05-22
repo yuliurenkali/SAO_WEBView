@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SAOINK</title>
+  <%- include('partials/common-head') %>
+</head>
+<body>
+  <%- include('partials/header') %>
+  
+	<div id="outbox">
+		<div id="imgbox" data-depth="0.4"></div>
+		<div id="svgbox" data-depth="0.2"></div>
+		<div id="bigbox" data-depth="0.05">
+			<div id="inbox">
+				<div id="box"></div>
+				<div id="blood"></div>
+				<div class="main">
+					<div id="canvas"></div>
+					<div id="time"></div>
+				</div>
+				<div class="bg-nav"></div>
+			</div>
+		</div>
+		<div class="boton" data-depth="0.1"> <a href="https://blog.bugcola.com/note/" target="_blank">
+				<svg viewBox="0 0 290 70" width="100%" height="100%">
+					<line class="L-T" x1="0" y1="-15" x2="0" y2="20" />
+					<line class="L-B" x1="0" y1="50" x2="0" y2="85" />
+					<line class="R-T" x1="290" y1="-15" x2="290" y2="20" />
+					<line class="R-B" x1="290" y1="50" x2="290" y2="85" />
+					<line class="T-L" x1="-125" y1="0" x2="20" y2="0" />
+					<line class="T-R" x1="270" y1="0" x2="415" y2="0" />
+					<line class="B-R" x1="270" y1="70" x2="415" y2="70" />
+					<line class="B-L" x1="-125" y1="70" x2="20" y2="70" />
+				</svg>
+				<p>Download</p>
+			</a> </div>
+	</div>
+
+  <!-- <%- include('partials/waifu') %> -->
+  <%- include('partials/footer') %>
+
+  <%- include('partials/common-scripts') %>
+</body>
+<script type="text/javascript">
+
+	var scene = $('#outbox').get(0);
+	var parallaxInstance = new Parallax(scene);
+	var bodyBgs = [];
+	bodyBgs[0] = "/img/bg4.jpg";
+	var randomBgIndex = Math.round(Math.random() * 10);
+	$('#imgbox').css({
+		"background-image": "url(" + bodyBgs[0] + ") "
+	});
+	var userAgent = navigator.userAgent;
+	var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
+	var isEdge = userAgent.indexOf('Edge') > -1 && !isLessIE11;
+	var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf('rv:11.0') > -1;
+	if (isLessIE11) {
+		console.log('duang~');
+	} else if (isEdge || isIE11) {
+		zscreen();
+		zparticle();
+	} else {
+		zscreen();
+		zparticle();
+
+	}
+	$('#btn-nav-menu').on('click', function () {
+		$(this).toggleClass('open');
+		$('.bg-nav, #nav-menu, #nav-menu ul').toggleClass('show');
+		$('#btn-nav-info, #btn-nav-set, .boton').toggleClass('unshow');
+	});
+	$('li[class^="nav-"]').on('click', function () {
+		$('#btn-nav-menu').click();
+	});
+	$('#btn-nav-info').on('click', function () {
+		$(this).toggleClass('open');
+		$('.bg-nav, #nav-info').toggleClass('show');
+		$('#btn-nav-menu, #btn-nav-set, .boton').toggleClass('unshow');
+	});
+</script>
+</html>
